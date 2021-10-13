@@ -16,7 +16,7 @@ function spawnProxy() {
     stdio: ["pipe", "pipe", "pipe", "ipc"]
   });
 
-  child.stdout.on('data', function (data) {});
+  child.stdout.on('data', function (data) { });
 
   child.on("message", (response) => {
     if (response.type === "fetch") {
@@ -123,6 +123,8 @@ function getProxyFilePath() {
       return "./tools/akashlytics-provider-proxy.exe";
     case "darwin":
       return "./tools/akashlytics-provider-proxy";
+    case "linux":
+      return "./tools/akashlytics-provider-proxy-lin";
     default:
       throw new Error("Unsupported platform: " + process.platform);
   }
