@@ -24,7 +24,7 @@ profiles:
     grafana-profile:
       resources:
         cpu:
-          units: 0.2
+          units: 1
         memory:
           size: 1Gi
         storage:
@@ -37,7 +37,7 @@ profiles:
     postgres-profile:
       resources:
         cpu:
-          units:0.2
+          units:1
         memory:
           size: 1Gi
         storage:
